@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>PureJS</title>
-  <script type="text/html" id="home">
-    <h1>Start <%= where %>!</h1>
-  </script>
-  <script type="text/html" id="example1">
-    <h1><%= title %></h1>
-    <% for (let i of title) { %>
-      <span><%= i %></span>
-    <% } %>
-  </script>
-  <script type="text/html" id="example2">
-    <h1><%= title %></h1>
-    <button class="my-button">Click me <%= counter %></button>
-  </script>
-  <script type="text/html" id="404">
-    <h1>404 Not found</h1>
-  </script>
-</head>
-<body>
-  <nav>
-    <a href="#">home</a>
-    <a href="#/ex1">example 1</a>
-    <a href="#/ex2">example 2</a>
-  </nav>
-  <div id="app"></div>
-  <script src="./app.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PureJS</title>
+
+    <script type="text/html" id="login">
+      <main>
+        <h1><%= title %></h1>
+        <form>
+          <label for="username">Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            autocorrect="off"
+            autocomplete="username"
+            placeholder="zwzt"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocorrect="off"
+            autocomplete="current-password"
+            minlength="4"
+            placeholder="********"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+      </main>
+    </script>
+
+    <script type="text/html" id="success">
+      <main>
+        <h1><%= title %></h1>
+        <button>Back to login page</button>
+      </main>
+    </script>
+
+    <script type="text/html" id="404">
+      <main>
+        <h1><%= title %></h1>
+        <button>Back to login page</button>
+      </main>
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./app.js"></script>
+  </body>
 </html>
