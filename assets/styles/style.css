@@ -4,10 +4,11 @@
   --white: #fff;
   --black: #000;
   --grey: #999;
-  --buttonBorderRadius: 30;
+  --buttonBorderRadius: 3rem;
   --spaceS: 0.5rem;
   --spaceM: 1rem;
   --spaceL: 2rem;
+  --spaceL: 4rem;
   --sizeS: 1.6rem;
   --sizeM: 1.8rem;
   --sizeL: 2.6rem;
@@ -16,15 +17,101 @@
   --weigthBold: 600;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   font-size: var(--sizeS);
   font-weight: var(--weightNormal);
   color: var(--black);
   background-color: var(--white);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login__image {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spaceL);
+}
+
+.form__label {
+  position: relative;
+  margin: 0 auto 2rem;
+  width: 100%;
+  max-width: 380px;
+  overflow: hidden;
+  font-weight: var(--weightBold);
+}
+
+.form__input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-bottom: 0.5px solid var(--grey);
+  padding: 16px 12px 0 12px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: var(--weigthBold);
+  color: var(--black);
+}
+
+.form__input:not(:placeholder-shown) + .form__label--visible {
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.form__input:focus + .form__label--visible {
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.form__label--visible {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  font-size: 16px;
+  color: #999;
+  font-weight: var(--weightBold);
+  transform-origin: 0 0;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.form__submit {
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: var(--sizeM);
+  border: 0;
+  margin-top: 4rem;
+  border-radius: var(--buttonBorderRadius);
+  width: 31.4rem;
+  height: 7rem;
+  cursor: pointer;
 }

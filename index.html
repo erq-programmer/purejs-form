@@ -11,31 +11,40 @@
     <link rel="stylesheet" href="./assets/styles/style.css" />
 
     <script type="text/html" id="login">
-      <main>
-        <h1><%= title %></h1>
-        <form class="form">
-          <label for="username">Username</label>
-          <input
-            id="username"
-            name="username"
-            type="text"
-            autocorrect="off"
-            autocomplete="username"
-            placeholder="zwzt"
-            required
-          />
-          <label for="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            autocorrect="off"
-            autocomplete="current-password"
-            minlength="4"
-            placeholder="********"
-            required
-          />
-          <button type="submit">Login</button>
+      <h1><%= title %></h1>
+      <main class="login">
+        <img class="login__image" src="./assets/images/login.svg" alt="Login background image" />
+        <form class="login__form">
+          <label for="username" class="form__label">
+            <input
+              class="form__input"
+              id="username"
+              name="username"
+              type="text"
+              autocorrect="off"
+              autocomplete="username"
+              placeholder="&nbsp;"
+              required
+            />
+            <span class="form__label--visible">Username</span>
+          </label>
+
+          <label class="form__label" for="password">
+            <input
+              class="form__input"
+              id="password"
+              name="password"
+              type="password"
+              autocorrect="off"
+              autocomplete="current-password"
+              placeholder="&nbsp;"
+              minlength="4"
+              required
+            />
+            <span class="form__label--visible">Password</span>
+          </label>
+
+          <button class="form__submit" type="submit">Login</button>
         </form>
       </main>
     </script>
