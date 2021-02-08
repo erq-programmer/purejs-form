@@ -46,28 +46,38 @@
             />
             <span class="form__label--visible">Password</span>
           </label>
-
+          <span class="form__error">There are no errors!</span>
           <button class="form__submit" type="submit">Login</button>
         </form>
       </main>
     </script>
 
     <script type="text/html" id="success">
-      <main>
-        <h1><%= title %></h1>
-        <button>Back to login page</button>
+      <main class="success">
+        <h1 class="success__heading"><%= title %></h1>
+        <img
+          class="success__image"
+          src="./assets/images/success.svg"
+          alt="Success info background image"
+        />
+        <a href="#" class="success__button">Back to login page</a>
       </main>
     </script>
 
     <script type="text/html" id="404">
-      <main>
-        <h1><%= title %></h1>
-        <button>Back to login page</button>
+      <main class="not-found">
+        <h1 class="not-found__heading"><%= title %></h1>
+        <img
+          class="not-found__image"
+          src="./assets/images/404.svg"
+          alt="Success info background image"
+        />
+        <a href="#" class="not-found__button">Back to login page</a>
       </main>
     </script>
   </head>
   <body>
     <div id="app"></div>
-    <script src="./dist/app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

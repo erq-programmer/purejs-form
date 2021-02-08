@@ -21,9 +21,20 @@ route('/', 'login', function () {
         body: JSON.stringify(data),
       })
         .then((response) => response.json())
-
         .then((data) => {
-          data.error ? console.log('Error: ', data) : console.log('Success: ', data);
+          if (data.error) {
+            const formError = document.querySelector('.form__error');
+            formError.textContent = data.message;
+            formError.style.opacity = '1';
+            formError.style.visibility = 'visible';
+            setTimeout(function () {
+              formError.textContent = 'There are no errors';
+              formError.style.opacity = '0';
+              formError.style.visibility = 'hidden';
+            }, 5000);
+          } else {
+            window.location.href = '#/success';
+          }
         })
         .catch((err) => {
           console.error('There has been a problem with your fetch operation:', err);
@@ -35,7 +46,7 @@ route('/', 'login', function () {
 });
 
 route('/success', 'success', function () {
-  this.title = 'Success Info';
+  this.title = 'Login success!';
 });
 
 route('*', '404', function () {
