@@ -4,6 +4,8 @@
 
 Simple App based on PureJS with two views: form and success info!
 
+## [DEMO](https://erq-programmer.github.io/purejs-form/)
+
 ## Screenshots
 
 ![purejs UI](/screenshot.png)
