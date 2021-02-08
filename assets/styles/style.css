@@ -1,0 +1,30 @@
+:root {
+  --primary: #ff4b3a;
+  --secondary: #21b580;
+  --white: #fff;
+  --black: #000;
+  --grey: #999;
+  --buttonBorderRadius: 30;
+  --spaceS: 0.5rem;
+  --spaceM: 1rem;
+  --spaceL: 2rem;
+  --sizeS: 1.6rem;
+  --sizeM: 1.8rem;
+  --sizeL: 2.6rem;
+  --sizeXL: 4.4rem;
+  --weightNormal: 500;
+  --weigthBold: 600;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--sizeS);
+  font-weight: var(--weightNormal);
+  color: var(--black);
+  background-color: var(--white);
+}
