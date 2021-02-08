@@ -1,4 +1,11 @@
 import { route } from './router';
+import { notFound } from './assets/templates/404';
+
+let scrp = document.createElement('script');
+scrp.type = 'text/html';
+scrp.id = '404';
+scrp.innerHTML = notFound;
+document.head.appendChild(scrp);
 
 route('/', 'login', function () {
   this.title = 'PureJS Form';
