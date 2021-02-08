@@ -1,5 +1,5 @@
 import { route } from './router';
-import { notFound } from './assets/templates/404';
+import { notFound, login, success } from './assets/templates';
 
 let scrp = document.createElement('script');
 scrp.type = 'text/html';
@@ -8,6 +8,12 @@ scrp.innerHTML = notFound;
 document.head.appendChild(scrp);
 
 route('/', 'login', function () {
+  let script = document.createElement('script');
+  script.type = 'text/html';
+  script.id = 'login';
+  script.innerHTML = login;
+  document.head.appendChild(script);
+
   this.title = 'PureJS Form';
   this.$on('.login__form', 'submit', (e) => {
     e.preventDefault();
@@ -53,9 +59,21 @@ route('/', 'login', function () {
 });
 
 route('/success', 'success', function () {
+  let script = document.createElement('script');
+  script.type = 'text/html';
+  script.id = 'success';
+  script.innerHTML = success;
+  document.head.appendChild(script);
+
   this.title = 'Login success!';
 });
 
 route('*', '404', function () {
+  let script = document.createElement('script');
+  script.type = 'text/html';
+  script.id = '404';
+  script.innerHTML = notFound;
+  document.head.appendChild(script);
+
   this.title = 'Page not found!';
 });

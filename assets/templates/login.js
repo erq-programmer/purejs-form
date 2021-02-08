@@ -1,0 +1,45 @@
+export const login = `<div class="container">
+<section class="hero">
+  <h1 class="hero__heading"><%= title %></h1>
+  <img class="hero__image" src="./assets/images/hero.svg" alt="Hero background image" />
+  <a href="https://github.com/erq-programmer/purejs-form" class="hero__button"
+    >Get started</a
+  >
+</section>
+
+<main class="login">
+  <img class="login__image" src="./assets/images/login.svg" alt="Login background image" />
+  <form class="login__form">
+    <label for="username" class="form__label">
+      <input
+        class="form__input"
+        id="username"
+        name="username"
+        type="text"
+        autocorrect="off"
+        autocomplete="username"
+        placeholder="&nbsp;"
+        required
+      />
+      <span class="form__label--visible">Username</span>
+    </label>
+
+    <label class="form__label" for="password">
+      <input
+        class="form__input"
+        id="password"
+        name="password"
+        type="password"
+        autocorrect="off"
+        autocomplete="current-password"
+        placeholder="&nbsp;"
+        minlength="4"
+        required
+      />
+      <span class="form__label--visible">Password</span>
+    </label>
+    <span class="form__error">There are no errors!</span>
+    <button class="form__submit" type="submit">Login</button>
+  </form>
+</main>
+</div>`;
