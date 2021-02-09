@@ -4,6 +4,7 @@
   --white: #fff;
   --black: #000;
   --grey: #999;
+  --grey2: #666;
   --buttonBorderRadius: 3rem;
   --spaceS: 0.5rem;
   --spaceM: 1rem;
@@ -43,7 +44,7 @@ body {
   width: 100%;
   height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   overflow: hidden;
 }
 
@@ -82,14 +83,21 @@ body {
   font-size: var(--sizeS);
   font-weight: var(--weigthBold);
   color: var(--black);
-  position: relative;
 }
 
-.form__input:not(:placeholder-shown) + .form__label--visible {
+.form__input--error {
+  border-bottom: 1px solid var(--primary);
+}
+
+.form__input--success {
+  border-bottom: 1px solid var(--secondary);
+}
+
+.form__input:not(:placeholder-shown) + .label__text {
   transform: translate3d(0, -12px, 0) scale(0.75);
 }
 
-.form__input:focus + .form__label--visible {
+.form__input:focus + .label__text {
   transform: translate3d(0, -12px, 0) scale(0.75);
 }
 
@@ -97,12 +105,33 @@ body {
   border-bottom: 2px solid var(--grey);
 }
 
-.form__label--visible {
+.toggle-password {
+  position: absolute;
+  bottom: 2.4rem;
+  right: 0;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  padding: 1rem 0.5rem;
+  font-size: 1.2rem;
+  color: var(--white);
+  font-weight: var(--weightBold);
+  cursor: pointer;
+  background-color: #999;
+  transition: color 0.2s ease-in-out;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+.toggle-password:hover {
+  color: var(--grey2);
+}
+
+.label__text {
   position: absolute;
   top: 20px;
   left: 0;
-  font-size: 16px;
-  color: #999;
+  font-size: var(--sizeS);
+  color: var(--grey2);
   font-weight: var(--weightBold);
   transform-origin: 0 0;
   transition: all 0.2s ease-in-out;
@@ -121,12 +150,20 @@ body {
   cursor: pointer;
 }
 
-.form__error {
+.label__error {
   color: var(--primary);
   visibility: hidden;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-top: 1rem;
   opacity: 0;
   font-weight: var(--weigthBold);
   transition: 0.3s opacity ease-in-out;
+}
+
+.label__error--visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .success {
