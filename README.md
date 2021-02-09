@@ -1,3 +1,5 @@
+![purejs UI](/screenshot.png)
+
 <h1 align="center">
   PureJS Form
 </h1>
@@ -8,7 +10,12 @@ Simple App based on PureJS with two views: form and success info!
 
 ## Screenshots
 
-![purejs UI](/screenshot.png)
+<p align="left">
+  <img width="150" src="/assets/images/UI-1.png">
+  <img width="150" src="/assets/images/UI-2.png">
+  <img width="150" src="/assets/images/UI-3.png">
+  <img width="150" src="/assets/images/UI-4.png">
+</p>
 
 ## Technologies
 
@@ -18,6 +25,9 @@ Simple App based on PureJS with two views: form and success info!
 
 - Sign in form
 - Routing 
+- Custom form validation
+- Templates system
+- Show/hide password
 
 ## Status
 
