@@ -31,7 +31,7 @@ Simple App based on PureJS with two views: form and success info!
 
 ## Status
 
-Project is: _in progress_
+Project is: _finished_
 
 ## Contact
 
